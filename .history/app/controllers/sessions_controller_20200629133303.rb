@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     def create
         # if !!params[:user][:name] && !params[:user][:name].empty?
             @user = User.find_by(name: params[:user][:name])
-            return head(:forbidden) unless @user.authenticate(params[:password])
+            return head(:forbidden) unless @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         # else
