@@ -1,0 +1,5 @@
+<%= form_for :user, url: '/signin' do |f| %>
+  <p>User: <%= f.collection_select :name, User.all, :id, :name %></p><br/>
+  <p>Password: <%= f.text_field :password if @user.is_admin? %></p>
+  <%= f.submit "Submit" %>
+<% end %>

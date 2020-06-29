@@ -1,0 +1,7 @@
+<%= form_tag @user, url: '/signin' do %>
+  <p>User: <%= collection_select :user, :id, User.all, :id, :name %></p><br/>
+  <%if !!@user %>
+    <p>Password: <%= text_field_tag :password %></p>
+  <%end%>
+  <%= submit_tag "Submit" %>
+<% end %>

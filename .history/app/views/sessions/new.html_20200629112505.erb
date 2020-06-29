@@ -1,0 +1,6 @@
+<%= form_for :user, url: '/signin' do |f| %>
+  <%= f.collection_select :user, User.all, :id, :name %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for :user do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br />
+    <%= f.label :height %>
+    <%= f.text_field :height %><br />
+    <%= f.label :tickets %>
+    <%= f.text_field :tickets %><br />
+    <div>
+    <%= f.label :nausea %>
+    <%= f.text_field :nausea %><br />
+    <%= f.label :happiness %>
+    <%= f.text_field :happiness %><br />
+    </div><br/>
+    <div>
+    <%= f.label :password %>
+    <%= f.text_field :password %><br />
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %><br />
+    </div><br/>
+    <%= f.submit 'Create user' %><br />
+<% end %>

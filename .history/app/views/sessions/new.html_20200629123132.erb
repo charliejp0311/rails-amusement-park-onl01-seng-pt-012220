@@ -1,0 +1,8 @@
+<%= form_for :user, url: '/signin' do |f| %>
+  <p>User: <%= f.collection_select :name, User.all, :id, :name %></p><br/>
+  <%byebug%>
+  <%if @user.admin%>
+    <p>Password: <%= f.text_field :password %></p>
+  <%end%>
+  <%= f.submit "Submit" %>
+<% end %>
