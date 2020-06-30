@@ -21,14 +21,12 @@ class UsersController < ApplicationController
       if current_user != @user
         redirect_to root_path
       end
-    else
-      render admin_user_path(@user)
     end
   end
 
   private
   def user_params
-    params.require(:user).permit(:name, :height, :tickets, :happiness, :nausea, :password, :admin)
+    params.require(:user).permit(:name, :height, :tickets, :happiness, :nausea, :password)
   end
   def set_user
     User.find_by(id: params[:id])

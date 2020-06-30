@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         redirect_to user_path(@user)
     end
     def destroy
-    
+        
     end
     
     

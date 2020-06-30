@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         redirect_to root_path
       end
     else
-      render admin_user_path(@user)
+      redirect_to admin_user_path(@user)
     end
   end
 

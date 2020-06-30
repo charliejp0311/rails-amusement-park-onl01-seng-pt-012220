@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   ##admin namespace
   namespace :admin do
     resources :sessions, only: [:new, :create, :destroy]
-    resources :users, only: [:new, :create, :show]
-    resources :attractions, only: [:edit, :show]
+    resources :users, only: [:show]
   end
   
   ##Root route required not sure if this is the right route but it is for now LOL
